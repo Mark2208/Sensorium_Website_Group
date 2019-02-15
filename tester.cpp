@@ -39,7 +39,7 @@ int main()
   //std::cout << aiden();
   //std::cout << alex();
   //std::cout << cian();
-  //std::cout << jay();
+  std::cout << jay();
   //std::cout << kyle();
   std::cout << mark();
 
