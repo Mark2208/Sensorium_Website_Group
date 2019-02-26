@@ -40,7 +40,7 @@ int main()
   //std::cout << alex();
   //std::cout << cian();
   //std::cout << jay();
-  //std::cout << kyle();
+  std::cout << kyle();
   std::cout << mark();
 
 }
