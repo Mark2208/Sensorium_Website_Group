@@ -28,7 +28,7 @@ SECRET_KEY = 'vv)mno35c(xuo%nekttqncs&pe53eq88yfi1#il)a@)y&f2k3&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['soc-web-liv-46.napier.ac.uk']
+ALLOWED_HOSTS = ['soc-web-liv-46.napier.ac.uk', '127.0.0.1']
 
 
 # Application definition
