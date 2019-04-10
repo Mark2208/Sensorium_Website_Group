@@ -10,15 +10,20 @@ from django.contrib.sitemaps.views import sitemap
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.static import serve
 
+from django.views.generic.base import TemplateView
+from testPage import views
+from django.conf.urls.static import static
+
 admin.autodiscover()
 
 urlpatterns = [
     url(r'^sitemap\.xml$', sitemap,
         {'sitemaps': {'cmspages': CMSSitemap}}),
-]
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += i18n_patterns(
     url(r'^admin/', admin.site.urls),  # NOQA
+	url(r'^testPage/$', views.testPage, name='testPage'),
     url(r'^', include('cms.urls')),
 )
 
