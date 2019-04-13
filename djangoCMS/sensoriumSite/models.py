@@ -9,6 +9,10 @@ class TestPlugin(CMSPlugin):
 
 def slot_siteDescription(instance):
     return 'Description'
+	
+
+def slot_equipment(instance):
+    return 'Equipment'
 
 	
 class myMainModel(models.Model):
@@ -17,7 +21,6 @@ class myMainModel(models.Model):
     description=models.CharField('description', max_length=255)
     text=models.CharField('text',max_length=200)
 	
-    my_placeholder = PlaceholderField(slot_siteDescription)
-
-	
+    plc_description = PlaceholderField(slot_siteDescription)
+   
 	

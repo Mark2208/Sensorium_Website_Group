@@ -11,8 +11,10 @@ def index(request):
     #obj = myMainModel.objects.first()
     obj = get_object_or_404(myMainModel)
 
-    return render(request, "transitive/index.html", {'obj': obj,})
+    return render(request, "site_template/index.html", {'obj': obj,})
 
 def test(request):
-    return render(request, "transitive/index.html", {})
+    obj = get_object_or_404(myMainModel)
+
+    return render(request, "transitive/index.html", {'obj': obj,})
 	
