@@ -11,7 +11,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.static import serve
 
 from django.views.generic.base import TemplateView
-from testPage import views
+from sensoriumSite import views
 from django.conf.urls.static import static
 
 admin.autodiscover()
@@ -23,7 +23,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     url(r'^admin/', admin.site.urls),  # NOQA
-	url(r'^testPage/$', views.testPage, name='testPage'),
+	#url(r'^sensoriumSite/', include('sensoriumSite.urls', namespace='sensoriumSite')),
     url(r'^', include('cms.urls')),
 )
 
