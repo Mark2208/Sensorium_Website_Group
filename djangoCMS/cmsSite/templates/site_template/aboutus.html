@@ -1,3 +1,9 @@
+{% extends 'site_template/base.html' %}
+{% load static %}
+{% load cms_tags %}
+
+{% block sensorium_content %}
+
 <!DOCTYPE html>
 <html  >
 <head>
@@ -6,20 +12,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v4.9.7, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/navlogo-700x124.png" type="image/x-icon">
+  <link rel="shortcut icon" href="{% static "assets/images/navlogo-700x124.png" %}" type="image/x-icon">
   <meta name="description" content="Web Page Maker Description">
   
   <title>About Us</title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
-  <link rel="stylesheet" href="assets/tether/tether.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link rel="stylesheet" href="{% static "assets/web/assets/mobirise-icons/mobirise-icons.css"%}">
+  <link rel="stylesheet" href="{% static "assets/web/assets/mobirise-icons2/mobirise2.css"%}">
+  <link rel="stylesheet" href="{% static "assets/tether/tether.min.css"%}">
+  <link rel="stylesheet" href="{% static "assets/bootstrap/css/bootstrap.min.css"%}">
+  <link rel="stylesheet" href="{% static "assets/bootstrap/css/bootstrap-grid.min.css"%}">
+  <link rel="stylesheet" href="{% static "assets/bootstrap/css/bootstrap-reboot.min.css"%}">
+  <link rel="stylesheet" href="{% static "assets/dropdown/css/style.css"%}">
+  <link rel="stylesheet" href="{% static "assets/socicon/css/styles.css"%}">
+  <link rel="stylesheet" href="{% static "assets/theme/css/style.css"%}">
+  <link rel="stylesheet" href="{% static "assets/mobirise/css/mbr-additional.css"%}" type="text/css">
   
   
   
@@ -42,7 +48,7 @@
             <div class="navbar-brand">
                 <span class="navbar-logo">
                     <a href="index.html">
-                         <img src="assets/images/navlogo-700x124.png" alt="Mobirise" title="" style="height: 3.8rem;">
+                         <img src="{% static "assets/images/navlogo-700x124.png"%}" alt="Mobirise" title="" style="height: 3.8rem;">
                     </a>
                 </span>
                 
@@ -97,13 +103,13 @@
             OUR AWESOME TEAM
         </h2>
         <h3 class="pb-5 mbr-section-subtitle mbr-fonts-style mbr-light display-5">
-            Click any icon or text to edit or style it. Click blue "Gear" icon in the top right corner to hide/show text and change the block and cards background, icons count and other.
+            {% render_placeholder obj.plc_about_us "640"%}
         </h3>
         <div class="row media-row">
             
         <div class="team-item col-lg-3 col-md-6">
                 <div class="item-image">
-                    <img src="assets/images/face3.jpg" alt="" title="">
+                    <img src="{% static "assets/images/face3.jpg"%}" alt="" title="">
                 </div>
                 <div class="item-caption py-3">
                     <div class="item-name px-2">
@@ -136,7 +142,7 @@
                 </div>
             </div><div class="team-item col-lg-3 col-md-6">
                 <div class="item-image">
-                    <img src="assets/images/face2.jpg" alt="" title="">
+                    <img src="{% static "assets/images/face2.jpg"%}" alt="" title="">
                 </div>
                 <div class="item-caption py-3">
                     <div class="item-name px-2">
@@ -169,7 +175,7 @@
                 </div>
             </div><div class="team-item col-lg-3 col-md-6">
                 <div class="item-image">
-                    <img src="assets/images/face3.jpg" alt="" title="">
+                    <img src="{% static "assets/images/face3.jpg"%}" alt="" title="">
                 </div>
                 <div class="item-caption py-3">
                     <div class="item-name px-2">
@@ -215,7 +221,7 @@
             
         <div class="team-item col-lg-3 col-md-6">
                 <div class="item-image">
-                    <img src="assets/images/face3.jpg" alt="" title="">
+                    <img src="{% static "assets/images/face3.jpg"%}" alt="" title="">
                 </div>
                 <div class="item-caption py-3">
                     <div class="item-name px-2">
@@ -248,7 +254,7 @@
                 </div>
             </div><div class="team-item col-lg-3 col-md-6">
                 <div class="item-image">
-                    <img src="assets/images/face2.jpg" alt="" title="">
+                    <img src="{% static "assets/images/face2.jpg"%}" alt="" title="">
                 </div>
                 <div class="item-caption py-3">
                     <div class="item-name px-2">
@@ -281,7 +287,7 @@
                 </div>
             </div><div class="team-item col-lg-3 col-md-6">
                 <div class="item-image">
-                    <img src="assets/images/face3.jpg" alt="" title="">
+                    <img src="{% static "assets/images/face3.jpg"%}" alt="" title="">
                 </div>
                 <div class="item-caption py-3">
                     <div class="item-name px-2">
@@ -400,7 +406,7 @@
             <div class="col-12 col-md-3">
                 <div class="media-wrap">
                     <a href="https://mobirise.co/">
-                        <img src="assets/images/logo2.png" alt="Mobirise">
+                        <img src="{% static "assets/images/logo2.png"%}" alt="Mobirise">
                     </a>
                 </div>
             </div>
@@ -486,17 +492,18 @@
 </section>
 
 
-  <script src="assets/web/assets/jquery/jquery.min.js"></script>
-  <script src="assets/popper/popper.min.js"></script>
-  <script src="assets/tether/tether.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/dropdown/js/script.min.js"></script>
-  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
-  <script src="assets/parallax/jarallax.min.js"></script>
-  <script src="assets/smoothscroll/smooth-scroll.js"></script>
-  <script src="assets/theme/js/script.js"></script>
-  <script src="assets/formoid/formoid.min.js"></script>
+  <script src="{% static "assets/web/assets/jquery/jquery.min.js"%}"></script>
+  <script src="{% static "assets/popper/popper.min.js"%}"></script>
+  <script src="{% static "assets/tether/tether.min.js"%}"></script>
+  <script src="{% static "assets/bootstrap/js/bootstrap.min.js"%}"></script>
+  <script src="{% static "assets/dropdown/js/script.min.js"%}"></script>
+  <script src="{% static "assets/touchswipe/jquery.touch-swipe.min.js"%}"></script>
+  <script src="{% static "assets/parallax/jarallax.min.js"%}"></script>
+  <script src="{% static "assets/smoothscroll/smooth-scroll.js"%}"></script>
+  <script src="{% static "assets/theme/js/script.js"%}"></script>
+  <script src="{% static "assets/formoid/formoid.min.js"%}"></script>
   
   
 </body>
 </html>
+{% endblock %}

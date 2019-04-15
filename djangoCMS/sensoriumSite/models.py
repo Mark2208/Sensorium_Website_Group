@@ -11,16 +11,18 @@ def slot_siteDescription(instance):
     return 'Description'
 	
 
-def slot_equipment(instance):
-    return 'Equipment'
+def slot_aboutUsDescription(instance):
+    return 'Description'
 
 	
 class myMainModel(models.Model):
     # your fields
-    title=models.CharField('title', max_length=255),
-    description=models.CharField('description', max_length=255)
-    text=models.CharField('text',max_length=200)
-	
     plc_description = PlaceholderField(slot_siteDescription)
+	
+class aboutUsModel(models.Model):
+    # your fields
+    plc_about_us = PlaceholderField(slot_aboutUsDescription)
+	
+	
    
 	

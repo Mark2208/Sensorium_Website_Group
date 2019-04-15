@@ -1,9 +1,10 @@
 from django.contrib import admin
 from cms.admin.placeholderadmin import PlaceholderAdminMixin
-from sensoriumSite.models import myMainModel
+from sensoriumSite.models import myMainModel, aboutUsModel
 
 	
-class MainModelAdmin(PlaceholderAdminMixin, admin.ModelAdmin):
+class myModelAdmin(PlaceholderAdminMixin, admin.ModelAdmin):
     pass
 
-admin.site.register(myMainModel, MainModelAdmin)
+admin.site.register(myMainModel, myModelAdmin)
+admin.site.register(aboutUsModel, myModelAdmin)
