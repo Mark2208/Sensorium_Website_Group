@@ -1,0 +1,45 @@
+{% load static %}
+
+{% if instance %}
+   
+		<div class="team-item col-lg-3 col-md-6">
+                <div class="item-image">
+                    <img src="{{ instance.img_name }}" alt="" title="">
+                </div>
+                <div class="item-caption py-3">
+                    <div class="item-name px-2">
+                        <p class="mbr-fonts-style display-5">
+                           {{ instance.name }} </p>
+                    </div>
+                    <div class="item-role px-2">
+                        <p> {{ instance.description}} </p>
+                    </div>
+					<div class="item-social pt-2">
+						{% if instance.Twitter_link != "n/a" %}
+                        <a href="{{ instance.Twitter_link }}" target="_blank">
+                            <span class="p-1 socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
+                        </a>
+						{% endif %}
+						
+						{% if instance.Facebook_link != "n/a" %}
+                        <a href="{{ instance.Facebook_link }}" target="_blank">
+                            <span class="p-1 socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
+                        </a>
+						{% endif %}
+						
+						{% if instance.Linkedin_link != "n/a" %}
+                        <a href="{{ instance.Linkedin_link }}" target="_blank">
+                            <span class="p-1 socicon-googleplus socicon mbr-iconfont mbr-iconfont-social"></span>
+                        </a>
+						{% endif %}
+						  
+                    </div>
+					
+                    
+                </div>
+		</div>
+    
+{% else %}
+    <p>No Users specified.</p>
+{% endif %}
+

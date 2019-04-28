@@ -1,0 +1,45 @@
+{% load static %}
+
+{% if instance %}
+
+
+<section class="features11 cid-roByGRtn6h" id="features11-p">
+
+
+    <div class="container">   
+        <div class="col-md-12">
+            <div class="media-container-row">
+                <div class="mbr-figure m-auto" style="width: 50%;">
+                    <img src="{{ instance.Image_Source }}" alt="Mobirise" title="">
+                </div>
+                <div class=" align-left aside-content">
+                    <h2 class="mbr-title pt-2 mbr-fonts-style display-2">
+                       {{ instance.Title }}</h2>
+                    <div class="mbr-section-text">
+                        <p class="mbr-text mb-5 pt-3 mbr-light mbr-fonts-style display-5">
+                       {{ instance.Content }}</p>
+                    </div>
+
+                    <div class="block-content">
+                        <div class="card p-3 pr-3">
+                                          
+                            <div class="card-box">
+                                <p class="block-text mbr-fonts-style display-7">
+                                   {{ instance.Sub_content }}  </p>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>          
+</section>
+
+
+{% else %}
+    <p>No News Available</p>
+{% endif %}	
+
+</section>
