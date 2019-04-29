@@ -25,6 +25,9 @@ urlpatterns += i18n_patterns(
     url(r'^admin/', admin.site.urls),  # NOQA
 	#url(r'^sensoriumSite/', include('sensoriumSite.urls', namespace='sensoriumSite')),
     url(r'^', include('cms.urls')),
+    url(r'^filer/', include('filer.urls')),
+   
+
 )
 
 # This is only needed when using runserver.

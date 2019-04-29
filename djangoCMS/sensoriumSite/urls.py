@@ -10,5 +10,5 @@ urlpatterns = [
    url(r'^projects/', views.projects,name='projects'),
    url(r'^equipment/', views.equipment,name='equipment'),
    url(r'^newsevents/', views.newsEvents,name='newsEvents'),
-   
+
 ]

@@ -6,11 +6,7 @@ from sensoriumSite.placeholderModels.home_placeholders import home_descriptionMo
 from sensoriumSite.placeholderModels.equipment_placeholders import equipment_descriptionModel
 from sensoriumSite.placeholderModels.aboutUs_placeholders import aboutUs_descriptionModel
 
-class TestPlugin(CMSPlugin):
-    text=models.CharField(max_length=200)
-    def __str__(self):
-        return self.text
-		
+
 
 def bioName(instance):
     return 'testName'
@@ -42,6 +38,30 @@ class Sensorium_News(CMSPlugin):
     plc_news = PlaceholderField('News/Events')
     def __str__(self):              # Python 3: def __unicode__(self):
         return self.Title
+		
+
+class Sensorium_Project(CMSPlugin):
+   
+    Title = models.CharField(max_length=200)
+    Content = models.CharField(max_length=500)
+    Sub_content = models.CharField(max_length=1000)
+    Image_Source = models.CharField(max_length=5000)
+	
+    def __str__(self):              # Python 3: def __unicode__(self):
+        return self.Title
+		
+		
+class image_Backs(CMSPlugin):
+   
+    homeBack = models.CharField(max_length=5000)
+    contentBack = models.CharField(max_length=5000)
+    equipmentBack = models.CharField(max_length=5000)
+    newsBack = models.CharField(max_length=5000)
+	
+    def __str__(self):              # Python 3: def __unicode__(self):
+        return self.homeBack
+
+		
 
 	
 
